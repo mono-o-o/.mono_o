@@ -961,11 +961,16 @@ main {
     .playing-card,
     .main-prog-card,
     .fav-card {
-        width: 100;
+        width: 100%;
         max-width: 100%;
         height: auto !important;
         transform: none !important;
         margin-bottom: var(--space-4);
+    }
+
+    .archive-card,
+    .playing-card {
+        max-height: 40%;
     }
 
     .scroll-container,
@@ -990,4 +995,5 @@ main {
         transform: none;
         opacity: 1 !important;
     }
+
 }
