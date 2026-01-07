@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.mono_o</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="f-elms no-select">
+    <main>
+        <section class="text-section">
+            <div class="text-section-text">
+                <h1 class="f-semibold">.mono_o</h1>
+                <h2 class="f-bold">just another soul in the 'net.</h2>
+                <img src="images/arriw.png" alt="decorative arrow">
+            </div>
+        </section>
+        <section class="nav-section" id="navSection">
+            <div class="decor-grid-wrapper">
+                <div class="decor-grid">
+                    <script>
+                        for (let i = 0; i < 48; i++) document.write('<div></div>');
+                    </script>
+                </div>
+            </div>
+            <nav class="f-semibold">
+                <a href="#" id="rigLink">the rig</a>
+                <a href="#" id="wasdLink">wasd list</a>
+                <a href="#" id="progLink">programs</a>
+                <button class="f-bold" id="dropMsg">msg me</button>
+            </nav>
+            <div class="rig-details f-medium">
+                <div class="rig-card">
+                    <h3 class="f-bold">LAPTOP SPECS</h3>
+                    <ul>
+                        <li>CPU: AMD Ryzen 7 5800H</li>
+                        <li>GPU: NVIDIA RTX 3070 140W</li>
+                        <li>RAM: 2x8GB DDR4-3200</li>
+                        <li>STORAGE: 2TB + 1TB NVMe SSDs</li>
+                        <li>DISPLAY: 16" 2560x1600 165Hz</li>
+                    </ul>
+                </div>
+                <div class="rig-card">
+                    <h3 class="f-bold">PERIPHERALS</h3>
+                    <ul>
+                        <li>MOUSE: Scyrox V6</li>
+                        <li>KEYBOARD: Custom Keychron Q1</li>
+                        <li>HEADPHONES: HIFIMAN Sundara</li>
+                        <li>GAMEPAD: Xbox Wireless Controller</li>
+                    </ul>
+                </div>
+                <button class="back-btn f-bold" onclick="toggleRigDetails()">
+                    <span>go back</span>
+                </button>
+            </div>
+            <div class="wasd-details f-medium">
+                <div class="wasd-card archive-card">
+                    <h3 class="f-bold">ARCHIVE</h3>
+                    <div class="scroll-container">
+                        <ul id="archiveList"></ul>
+                    </div>
+                </div>
+                <div class="wasd-card playing-card">
+                    <h3 class="f-bold">PLAYING</h3>
+                    <div class="scroll-container">
+                        <ul id="playingList"></ul>
+                    </div>
+                </div>
+                <button class="back-btn f-bold" onclick="toggleWasdDetails()">
+                    <span>go back</span>
+                </button>
+            </div>
+            <div class="prog-details f-medium">
+                <div class="prog-card main-prog-card">
+                    <div class="prog-grid" id="progGrid"></div>
+                </div>
+                <div class="prog-card fav-card">
+                    <h3 class="f-bold">ESSENTIALS</h3>
+                    <ul>
+                        <li>> Vivaldi</li>
+                        <li>> Vesktop</li>
+                        <li>> Spotify</li>
+                    </ul>
+                </div>
+                <button class="back-btn f-bold" onClick="toggleProgDetails()">
+                    <span>go back</span>
+                </button>
+            </div>
+            <div class="socials-wrapper">
+                <div class="socials">
+                    <a href="#" class="discord-btn" onClick="copyDiscord(this, '.mono_o'); return false;">
+                        <span class="copied-text f-bold">copied!</span>
+                        <img src="images/discord.png" alt="discord icon">
+                    </a>
+                    <a href="https://steamcommunity.com/id/mono_graph" target="_blank" rel="noopener noreferrer">
+                        <img src="images/steam.png" alt="steam icon">
+                    </a>
+                    <a href="https://www.last.fm/user/fokker_dxxi" target="_blank" rel="noopener noreferrer">
+                        <img src="images/lastfm.png" alt="last.fm icon">
+                    </a>
+                    <a href="https://www.youtube.com/@monograph341" target="_blank" rel="noopener noreferrer">
+                        <img src="images/yt.png" alt="youtube icon">
+                    </a>
+                </div>
+                <h3 class="f-medium">socials</h3>
+            </div>
+        </section>
+        <div id="msgModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn f-bold"><img src="images/close.png" alt="close window"></span>
+                <h2 class="f-bold">drop a message</h2>
+                <form id="msgForm">
+                    <input type="text" name="sender" placeholder="ur name (optional)" autocomplete="off">
+                    <textarea name="message" placeholder="ur message here..."></textarea>
+                    <button type="submit" class="f-semibold">send</button>
+                </form>
+                <p id="statusMsg"></p>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
